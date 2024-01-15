@@ -1,9 +1,15 @@
 <script>
+import ProjectIndex from './views/projects/index.vue';
 
+export default {
+    components: {
+      ProjectIndex,
+    }
+  }
 </script>
 
 <template>
-  <div class="container">Hello World</div>
+  <ProjectIndex />
 </template>
 
 <style lang="scss">
