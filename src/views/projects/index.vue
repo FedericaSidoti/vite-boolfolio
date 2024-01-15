@@ -1,10 +1,12 @@
 
 
 <script>
+    import ProjectCard from '../../components/ProjectCard.vue';
     import axios from 'axios';
 
     export default {
         components: {
+            ProjectCard,
         },
         data() {
             return {
@@ -28,20 +30,24 @@
 </script>
 
 <template>
-
-    <div class="card" v-for="project in projects">
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.type.name }}</p>
-        <p>{{ project.type.description }}</p>
-        <div class="tags">
-            <p v-for="tech in project.technologies">{{ tech.name }}</p>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <ProjectCard class="col-3" v-for="project in projects" :project="project" :key="project.id" />
+            </div>
         </div>
-        
     </div>
+    
+
+    
 
 </template>
 
 <style lang="scss">
+
+.section {
+    padding: 30px; 
+}
 
 .card {
     display: flex; 
