@@ -16,7 +16,7 @@ export default {
         <div class="container-fluid navbar">
             <ul class="links">
                 <li>
-                    logo
+                    <img class="logo" src="../assets/a.png">
                 </li>
                 <li>
                     <router-link :to="{name:'home'}">Home</router-link>
@@ -39,6 +39,7 @@ export default {
 .navbar {
     display: flex; 
     justify-content: space-around;
+    align-items: center; 
     padding: 10px 0; 
     background-color: #1C506E;
     color:  #F18908;
@@ -51,5 +52,9 @@ export default {
             color: #FEC572;
         }
     }
+}
+
+.logo {
+    width: 25px; 
 }
 </style>

@@ -14,6 +14,7 @@ export default {
             .then((res) => {
           // console.log(res.data.post)
                 this.project = res.data.project;
+                console.log(this.project)
             })
             .catch((error) => {
                 console.log("project not found", error.response);
@@ -39,8 +40,8 @@ export default {
             <img class="img" :src="project.thumb">
             <p>{{ project.type.name }}</p>
             <p>{{ project.description }}</p>
-            <div v-for="tech in project.technologies">
-                <p v-if="tech">{{ tech.name }}</p>
+            <div class="tags" v-if="project.technologies" >
+                <p v-for="tech in project.technologies" >{{ tech.name }}</p>
             </div>
         </div>
         <div v-else>Caricamento...</div>
@@ -57,6 +58,16 @@ export default {
 
 .img {
     width: 200px; 
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.row {
+    justify-content: center; 
 }
 
 </style>
