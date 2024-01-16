@@ -31,23 +31,7 @@
 
 <template>
     
-    <header>
-        <div class="container-fluid navbar">
-            <ul class="links">
-                <li>
-                    logo
-                </li>
-                <li>
-                    <p>MyProjects</p>
-                </li>
-            </ul>
-            <ul class="links">
-                <li>Home</li>
-                <li>Admin</li>
-            </ul>
-        </div>
-    </header>
-
+    
     <div class="section">
         <div class="container">
             <div class="row cards">
@@ -67,22 +51,7 @@
     padding: 30px; 
 }
 
-.navbar {
-    display: flex; 
-    justify-content: space-around;
-    padding: 10px 0; 
-    background-color: #1C506E;
-    color:  #F18908;
 
-    .links {
-        display: flex; 
-        gap: 10px; 
-
-        li:hover {
-            color: #FEC572;
-        }
-    }
-}
 
 .cards {
     padding: 10px 20px; 
