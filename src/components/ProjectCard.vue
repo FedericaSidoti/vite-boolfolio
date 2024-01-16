@@ -33,6 +33,9 @@
             <div class="tags">
                 <p v-for="tech in project.technologies">{{ tech.name }}</p>
             </div>
+            <p class="link">
+                <router-link :to="{ name: 'projects.show', params: { slug: project.slug }}">Dettagli</router-link>
+            </p>
         </div>
     </div>
     
@@ -63,6 +66,11 @@
 
     .thumb {
         max-width: 100%; 
+    }
+
+    .link {
+        font-size: 22px; 
+        font-weight: 700;
     }
 }
 
