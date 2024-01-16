@@ -4,8 +4,25 @@
     box-sizing: border-box;
 }
 
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+body {
+    background-color: #5B8BA8;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Dosis', sans-serif;
+}
+
 .container {
-    max-width: 1800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 

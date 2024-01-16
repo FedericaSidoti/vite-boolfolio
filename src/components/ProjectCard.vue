@@ -23,27 +23,47 @@
 </script>
 
 <template>
-
-    <div class="card">
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.type.name }}</p>
-        <p>{{ project.type.description }}</p>
-        <div class="tags">
-            <p v-for="tech in project.technologies">{{ tech.name }}</p>
+    
+    <div class="col-3">
+        <div class="card">
+            <h2>{{ project.title }}</h2>
+            <img class="thumb" :src="project.thumb">
+            <p>{{ project.type.name }}</p>
+            <p>{{ project.type.description }}</p>
+            <div class="tags">
+                <p v-for="tech in project.technologies">{{ tech.name }}</p>
+            </div>
         </div>
-        
     </div>
+    
 
 </template>
 
 <style lang="scss">
 
+.col-3{
+    padding: 10px; 
+}
+
 .card {
     display: flex; 
-    border: 1px solid black;
     flex-direction:column; 
     gap: 10px; 
     padding: 10px; 
+    height: 100%;
+    border-radius: 10px; 
+
+    &:hover {
+        border: 3px solid  #FEC572;
+    }
+
+    h2{
+        color : #1C506E;
+    }
+
+    .thumb {
+        max-width: 100%; 
+    }
 }
 
 .tags {
