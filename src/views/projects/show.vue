@@ -12,7 +12,7 @@ export default {
     fetchProject() {
         axios.get(`${this.BASE_URL}/projects/${this.$route.params.slug}`)
             .then((res) => {
-          // console.log(res.data.post)
+           //console.log(res.data)
                 this.project = res.data.project;
                 console.log(this.project)
             })
@@ -37,11 +37,11 @@ export default {
       <div class="row">
         <div class="col-6" v-if="project">
             <h1>{{ project.title }}</h1>
-            <img class="img" :src="project.thumb">
+            <img class="img" :src="'http://127.0.0.1:8000'+ project.thumb">
             <p>{{ project.type.name }}</p>
             <p>{{ project.description }}</p>
             <div class="tags" v-if="project.technologies" >
-                <p v-for="tech in project.technologies" >{{ tech.name }}</p>
+                <p v-for="tech in project.technologies" v-bind:style="{ 'border-color': tech.color }" >{{ tech.name }}</p>
             </div>
         </div>
         <div v-else>Caricamento...</div>

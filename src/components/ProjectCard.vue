@@ -31,7 +31,7 @@
             <p>{{ project.type.name }}</p>
             <p>{{ project.type.description }}</p>
             <div class="tags">
-                <p v-for="tech in project.technologies">{{ tech.name }}</p>
+                <p v-for="tech in project.technologies" v-bind:style="{ 'border-color': tech.color } ">{{ tech.name }} </p>
             </div>
             <p class="link">
                 <router-link :to="{ name: 'projects.show', params: { slug: project.slug }}">Dettagli</router-link>
@@ -51,6 +51,8 @@
 .card {
     display: flex; 
     flex-direction:column; 
+    justify-content: center;
+    align-items: center;
     gap: 10px; 
     padding: 10px; 
     height: 100%;
@@ -62,6 +64,7 @@
 
     h2{
         color : #1C506E;
+        text-align: center;
     }
 
     .thumb {
@@ -69,15 +72,28 @@
     }
 
     .link {
-        font-size: 22px; 
+        text-align: center;
+        margin-top: auto;
+        font-size: 18px; 
         font-weight: 700;
+        color: #FEC572;
+        background-color: #1C506E;
+        border-radius: 10px;
+        padding: 2px 8px; 
+        width: 60%;
     }
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; 
+    justify-content: center;
+    gap: 3px; 
+        p {
+            border-radius : 10px; 
+            padding: 2px 8px ; 
+            border: 2px solid; 
+        }
 }
 
 </style>

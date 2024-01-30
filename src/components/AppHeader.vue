@@ -36,6 +36,10 @@ export default {
 </template>
 
 <style lang="scss">
+header{
+   padding-bottom: 20px; 
+}
+
 .navbar {
     display: flex; 
     justify-content: space-around;
@@ -43,6 +47,12 @@ export default {
     padding: 10px 0; 
     background-color: #1C506E;
     color:  #F18908;
+    height: 50px;
+    position: fixed;
+    top:0;
+    right: 0; 
+    left: 0; 
+    transition: height 0.2s;
 
     .links {
         display: flex; 
@@ -52,6 +62,11 @@ export default {
             color: #FEC572;
         }
     }
+}
+
+.navbar:hover {
+    height: 70px;
+    font-size: 20px;
 }
 
 .logo {
