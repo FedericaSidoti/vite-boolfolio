@@ -27,7 +27,7 @@
     <div class="col-3">
         <div class="card">
             <h2>{{ project.title }}</h2>
-            <img v-if="project.thumb" class="thumb" :src="project.thumb">
+            <img v-if="project.thumb" class="thumb" :src="'http://127.0.0.1:8000' + project.thumb">
             <p>{{ project.type.name }}</p>
             <p>{{ project.type.description }}</p>
             <div class="tags">

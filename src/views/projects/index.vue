@@ -50,7 +50,7 @@
     <div class="section">
         <div class="container">
             <div v-if="projects" class="row cards">
-                <ProjectCard v-for="project in projects" :project="project" :key="project.id" />
+                <ProjectCard class="card_" v-for="project in projects" :project="project" :key="project.id" />
             </div>
             <p v-else> Caricamento...</p>
         </div>
@@ -96,6 +96,11 @@
     padding: 10px 20px; 
 
 }
+
+.card_:hover {
+    transform: scale(1.1);
+}
+
 
 
 </style>
