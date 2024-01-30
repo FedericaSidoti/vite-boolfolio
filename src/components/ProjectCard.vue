@@ -27,7 +27,7 @@
     <div class="col-3">
         <div class="card">
             <h2>{{ project.title }}</h2>
-            <img class="thumb" :src="project.thumb">
+            <img v-if="project.thumb" class="thumb" :src="project.thumb">
             <p>{{ project.type.name }}</p>
             <p>{{ project.type.description }}</p>
             <div class="tags">
