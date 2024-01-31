@@ -29,6 +29,9 @@ export default {
                 <li>
                     <router-link :to="{name:'projects.index'}">Portfolio</router-link>
                 </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/login" target="_blank">Admin Zone</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -71,5 +74,11 @@ header{
 
 .logo {
     width: 25px; 
+    transform: rotate(0);
+    transition: transform 0.5s;
+}
+
+.logo:hover{
+    transform: rotate(180deg);
 }
 </style>

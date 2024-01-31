@@ -36,7 +36,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-6" v-if="project">
-            <h1>{{ project.title }}</h1>
+            <h1 class="title">{{ project.title }}</h1>
             <img class="img" :src="'http://127.0.0.1:8000'+ project.thumb">
             <p>{{ project.type.name }}</p>
             <p>{{ project.description }}</p>
@@ -50,14 +50,23 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" style="scoped">
 
 .col-6 {
     flex-basis: calc((100% / 12)*6);
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+
+    .title {
+      text-align: center;
+    }
 }
 
 .img {
-    width: 200px; 
+    width: 400px; 
 }
 
 .tags {
@@ -68,6 +77,11 @@ export default {
 
 .row {
     justify-content: center; 
+}
+
+.section {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 </style>

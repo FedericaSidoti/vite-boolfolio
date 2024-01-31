@@ -23,7 +23,7 @@ export default {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .slide-enter-to {
@@ -48,6 +48,7 @@ export default {
 
 .main {
   padding: 50px; 
+  min-height: 100vh;
 }
 
 

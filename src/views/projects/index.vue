@@ -62,26 +62,28 @@ beforeMount() {
             <img src="/img/loading.webp">
         </div>
     </div>
-    <div class="section">
+
         <div class="container">
         <ul class="paginate">
-            <li v-for="n in lastPage">
-            <p :class="n === currentPage ? 'active' : ''" @click="getPage(n)">
+            <li v-for="n in lastPage"  @click="getPage(n)">
+            <p :class="n === currentPage ? 'active' : ''">
                 {{ n }}
             </p>
             </li>
         </ul>
         </div>
     </div>
-    </div>
+
 </template>
 
 <style lang="scss">
 .section {
   padding: 30px;
+  margin-top: 10px; 
 }
 
 .paginate {
+    padding: 10px; 
   display: flex;
   justify-content: center;
   gap: 10px;
